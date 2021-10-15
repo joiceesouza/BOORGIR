@@ -14,3 +14,17 @@ export const getProducts = async () => {
   const response = await fetch(url, config)
   return response
 }
+
+export const getOrder = async () => {
+  const url = 'https://lab-api-bq.herokuapp.com/orders'
+
+  const config ={
+    method: 'GET',
+    headers:{
+      'Content-Type': 'application/json',
+      'Authorization': `${tokenUser}`
+    }
+  }
+  const orderGet = await fetch(url, config)
+  return orderGet
+}

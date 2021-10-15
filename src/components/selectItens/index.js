@@ -1,24 +1,8 @@
-import Selection from "./selection";
+const STATUS = {
+  PENDING: "pending",
+  DONE: "Finalizado",
+  READY: "Ag. Servir",
+  PROCESSING: "Preparando...",
+};
 
-function Option({
-  optionValue,
-  optionClassName
-}) {
-  return (
-    <Selection>
-      <option className={optionClassName}></option>
-      <option className={optionClassName} value={optionValue}></option>
-      <option className={optionClassName} value={optionValue}></option>
-      <option className={optionClassName} value={optionValue}></option>
-      <option className={optionClassName} value={optionValue}></option>
-      <option className={optionClassName} value={optionValue}></option>
-      <option className={optionClassName} value={optionValue}></option>
-      <option className={optionClassName} value={optionValue}></option>
-      <option className={optionClassName} value={optionValue}></option>
-      <option className={optionClassName} value={optionValue}></option>
-      <option className={optionClassName} value={optionValue}></option>
-    </Selection>
-  )
-}
-
-export default Option;
+export default STATUS;

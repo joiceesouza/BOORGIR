@@ -1,13 +1,31 @@
-import './style.css'
+import { getOrder } from "../../services/data";
+import { useEffect, useState } from "react";
+import ProductOrder from "./productOrder";
 
-function cozinha() {
+function Kitchen() {
+  const [order, setOrder]= useState([])
+
+  useEffect(() => {
+    getOrder()
+      .then((orderRequest) => {
+        orderRequest.json()
+          .then((listOrder) => {
+            setOrder(listOrder)
+          
+          })
+      })
+  }, [])
   return (
-    < >
-      <div className='container-kitchen'>
-        <button>-</button>
-      </div>
-
+    <>
+    {order.map((item)=>(
+      <ProductOrder
+      key={item.id}
+      item={item}
+      />
+    ))}
     </>
   )
 }
-export default cozinha;
+
+
+export default Kitchen

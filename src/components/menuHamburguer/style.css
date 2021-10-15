@@ -22,9 +22,10 @@
 
 .menu-class {
     position: relative;
-    min-height: 100%;
-    max-width: 100%;
-    width: 100%;
+    min-height: 80px;
+    max-width: 60px;
+    width: 40px;
+    display: contents;
 
 }
 
@@ -114,9 +115,9 @@
 
 .menu.menuOpen {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: var(--cinza-escuro);
-    box-shadow: 10px 0 69px 0px rgba(0, 0, 0, 0.59);
+    position: absolute;
 }
 
 .menu.menuClose {

@@ -11,7 +11,7 @@ function CardList({ productList, onClick }) {
               <p className='class-p'>{product.name}</p>
               <p>{product.descricao}</p>
               <p className='class-price'>Preço: R$ {product.price},00</p>
-              <p>Sabor: {product.flavor}</p>
+              <p>{product.flavor}</p>
             </article>)
         })
       }

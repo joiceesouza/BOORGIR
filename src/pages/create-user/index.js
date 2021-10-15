@@ -1,4 +1,4 @@
-import GIF from '../../components/imgs/Logotipo(4).svg';
+import GIF from '../../components/imgs/novologo.gif';
 //import value from "../../services/auth";
 import './style.scss';
 import { useState } from "react";
@@ -77,7 +77,7 @@ export default function CreateUser() {
       <div className='container'>
         <div className='row'>
           <div className='co1 align-items-center flex-co1'>
-            <img src={GIF} alt='gif' />
+            <img className='img-class' src={GIF} alt='gif' />
           </div>
 
 

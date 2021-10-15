@@ -19,7 +19,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
   }
   
 body {
@@ -37,17 +37,16 @@ background-color: var(--platinum);
     cursor: pointer;
     padding: .6rem 0;
     border-radius: .7rem;
-    border: 2px solid var(--vermelho-escuro);
-    background-color: var(--platinum);
-    color: var(--vermelho-escuro);
+    border: none ;
+    background-color: var(--preto);
+    color: var(--cinza);
     font-size: 1.2rem;
     margin: 10px;
-    text-align: center;
     justify-content: center;
-    width: 50vw;
-    height: 5rem;
-    outline: none;
-
+    width: 10vw;
+    height: 3rem;
+    display: flex;
+    margin-top: -250px;
 }
 
 .button-hall:hover{
@@ -58,8 +57,7 @@ background-color: var(--platinum);
 
 .item {
     border-radius:0 0 50%;
-    margin-top: 30px;
-
+    display: flex;
 }
 
 .input-area{
@@ -68,7 +66,7 @@ background-color: var(--platinum);
     border: none;
     border-bottom: 1px solid var(--preto);
     height: 2rem;
-    width: 90%;
+    width: 50%;
     color: var(--vermelho-escuro); 
 
 }
@@ -79,48 +77,62 @@ background-color: var(--platinum);
     font-family: 'Poppins';
 }
 
+
 .nav{
     display: flex;
-    color: var(--vermelho-escuro);
+    color: var(--preto);
     justify-content: center;
     text-align: center;
     border:0 1px solid var(--preto);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    height: 70px;
+    height: 60px;
+    font-weight: 800;
+
 }
 
 .products-img {
     height: 100px;
-    width: 150px;
+    width: 100px;
     border-radius: 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .item-list{
-    display: grid;
-    align-items: center;
+    display:grid;
+    text-align: center;
     justify-content: center;
+    align-items:center;
     border-radius: .7rem;
-    border: 2px solid var(--vermelho-escuro);
+    border: 2px solid var(--preto);
     margin: 6px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: var(--cinza-medio);
-    color: var(--vermelho-escuro);
-   
+    color: var(--preto);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.item-list:hover {
+    padding: 25px;
+    font-weight: 800;
+
 }
 .cartItem {
     border: none;
  /*   border: 1px dotted var(--cinza-escuro);*/
     display: grid;
-    width: 90vw;
-    height: 50rem;
+    width: 30vw;
+    height: 20rem;
     margin: 35px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: 10px 0 69px 0px rgba(0, 0, 0, 0.59);
+    float:none;
+    
 }
 .remove {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    flex-direction: column;
 }
 
 .button-class {
@@ -128,17 +140,20 @@ background-color: var(--platinum);
     justify-content: center;
     cursor: pointer;
     padding: .6rem 0;
-    border-radius: .7rem;
     border: 2px solid var(--cinza2);
     background-color: var(--platinum);
     color: var(--vermelho-escuro);
     font-size: 1.2rem;
-    margin:10px;
     text-align: center;
-    width: 15vw;
-    height: 2rem;
+    width: 30vw;
+    height: 3rem;
     outline: none;
-    margin-top: 115px;
+    margin-top: 3px;
+}
+
+.div-button {
+    display: flex;
+    align-items: center;
 }
 
 .style-mesas {
@@ -179,6 +194,10 @@ background-color: var(--platinum);
     color: var(--preto);
     gap: .5rem;
 }
+.class-order {
+    display: flex;
+    flex-direction: column;
+}
 
 .order, .button-qtd{
     justify-content: center;
@@ -196,4 +215,47 @@ background-color: var(--platinum);
     font-size: 25px;
     cursor: pointer;
 }
+
+.containerItem {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+.total {
+    width: 30vw;
+    height: 3rem;
+    border: 2px solid var(--vermelho);
+    text-align: center;
+    color: var(--vermelho);
+    font-weight: 800;
+}
+.class-area {
+    display: flex;
+    width: 100px;
+    height: 3rem;
+    margin: 2rem;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: .6rem 0;
+    border-radius: 100%;
+    border: none;
+    background: transparent;
+    color: var(--cinza2);
+    font-size: 1.2rem;
+    text-align: center;
+    width: 10vw;
+    height: 3rem;
+    outline: none;
+    background: transparent;
+    margin: 10px;
+}
+
+
 

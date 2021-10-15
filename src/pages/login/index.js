@@ -1,5 +1,5 @@
 //import Button from "../../components/button/button";
-import GIF from '../../components/imgs/Logotipo(4).svg'
+import GIF from '../../components/imgs/novologo.gif'
 import { useState, } from "react";
 import { useHistory } from "react-router";
 import './style.css';
@@ -63,8 +63,8 @@ export function Login() {
 
       <div className='container'>
         <div className='row'>
-          <div className='co1 align-items-center flex-co1' style={{ 'backgroundColor': '#E3E3E3' }}>
-            <img src={GIF} alt='gif' />
+          <div className='co1 align-items-center flex-co1' style={{ 'backgroundColor': 'black' }}>
+            <img className='img-class'src={GIF} alt='gif' />
           </div>
 
 

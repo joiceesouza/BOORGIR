@@ -27,11 +27,12 @@
 }
 
 .modal-container {
-    background-color: #fff;
-    color: black;
+    background-color: var(--cinza-claro);
+    color: var(--vermelho-escuro);
     width: 60%;
     height: 60%;
     border-radius: 20px;
+    scroll-behavior:smooth;
 }
 .close {
     background-color: transparent;
@@ -52,7 +53,7 @@
     position: absolute;
     width: 2.5px;
     height: 24px;
-    background-color: black;
+    background-color: var(--preto);
 }
 .close::before {
     transform: rotate(55deg);

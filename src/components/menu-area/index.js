@@ -1,12 +1,26 @@
-const MenuArea = ({ nome, preco }) => {
+const MenuArea = ({ nome, preco,id }) => {
   return (
-    <li className="order">
+    <>
+    <li className="order"id={id}>
       <div className="class-order">
         <p className="class-p-order">{nome}</p>
         <p className="price-item-order">R${preco},00</p>
       </div>
     </li>
+    
+    </>
   )
 }
 
 export default MenuArea;
+
+/* <button className='cart-btn'
+    onClick={() => removeItem(item)}>-
+    </button> 
+    
+    
+    
+      <label type="number" name="quantity"> {quantity}</label>
+      <button className='cart-btn'
+      onClick={() => adicionarItem(item)}>+
+      </button> */

@@ -60,15 +60,12 @@ export function Login() {
   }
 
   return (
-    <>
-
+    <main>
       <div className='container'>
         <div className='row'>
           <div className='co1 align-items-center flex-co1' style={{ 'backgroundColor': 'black' }}>
-            <img className='img-class'src={GIF} alt='gif' />
+            <img className='img-class' src={GIF} alt='gif' />
           </div>
-
-
           <div className='co1 align-items-center'>
             <div className='form-wrapper align-items-center'>
               <div className='form sign-in'>
@@ -102,14 +99,13 @@ export function Login() {
                   <b>
                     <Link className='link-class' to="/cadastrar">Cadastre-se aqui</Link>
                   </b>
-
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </main>
   );
 
 }

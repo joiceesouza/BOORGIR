@@ -55,7 +55,7 @@ export default function CreateUser() {
   }
 
   return (
-    <>
+    <main>
       <div className='container'>
         <div className='row'>
           <div className='co1 align-items-center flex-co1'>
@@ -119,8 +119,9 @@ export default function CreateUser() {
               </div>
             </div>
           </div>
+
         </div>
       </div>
-    </>
+    </main>
   );
 }

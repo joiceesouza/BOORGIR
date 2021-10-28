@@ -54,6 +54,7 @@ const Cardapio = () => {
       .then((res) => res.json())
       .then((json) => {
         order = json
+        console.log(order)
         if (nameValue === '' || mesaValue === '' || addItem === '') {
           setModal(true)
         }
@@ -73,7 +74,6 @@ const Cardapio = () => {
           })
       })
   }, [])
-  console.log(order)
 
   function MenuItem(item) {
     const itemCard = addItem.find((card) => card.id === item.id)

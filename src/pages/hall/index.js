@@ -182,7 +182,7 @@ const Cardapio = () => {
                       buttonClass='contador'
                     >
                     </Button>
-                    <p className='contador'> {item.qtd}</p>
+                    <p className='number-contador'> {item.qtd}</p>
                     <Button
                       buttonType='button'
                       buttonOnclick={() => RemoveItem(item)}
@@ -191,6 +191,7 @@ const Cardapio = () => {
                     >
                     </Button>
                   </div>
+                  <hr/>
                 </div>
               )
             })}

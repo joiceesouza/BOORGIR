@@ -21,9 +21,7 @@
     --cinza3: #efefef;
 }
 
-html {
-    scroll-behavior:smooth;
-  }
+
   
 body {
 background-color: var(--platinum);
@@ -57,7 +55,7 @@ background-color: var(--platinum);
     margin: 6px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: var(--cinza-medio);
-    color: var(--preto);
+    color: var(--);
     cursor: pointer;
     transition: .3s;
     overflow: auto;
@@ -98,6 +96,7 @@ background-color: var(--platinum);
     overflow: auto;
     margin-top: -40px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
 
 }
 
@@ -110,6 +109,9 @@ background-color: var(--platinum);
     margin: 3rem;
     overflow: auto;
     border: 2px solid var(--vermelho-escuro);
+    color: var(--cinza-escuro);
+    border-radius: .7rem;
+    scroll-behavior:smooth;
 }
 
 .contador-button {
@@ -118,17 +120,24 @@ background-color: var(--platinum);
     text-align: center;
     width: 6em;
     height: 1.5em;
-    background: var(--preto);
     gap: .7rem;
     margin-left: 5rem;
 }
 
 .contador {
-    background: transparent;
+    background: var(--preto);
+    border-radius: 30%;
     border: none;
+    height: 2rem;
+    width: 2rem;
     color: var(--cinza3);
-    font-size: 1.5rem;
+    font-size: 1rem;
     cursor: pointer;
+}
+.number-contador {
+    font-size: 1rem;
+    color: var(--cinza-escuro);
+    font-weight: bold;
 }
 
 .order {
@@ -200,6 +209,7 @@ background-color: var(--platinum);
     flex-wrap: wrap;
     max-width: 400px;
     overflow: auto;
+    border-radius: .7rem;
 }
 
 .rota-kitchen {
@@ -220,6 +230,12 @@ background-color: var(--platinum);
     justify-content: center;
     text-align: center;
     margin-top: 35px;
+}
+
+.class-area {
+    height: 6rem;
+    width: 15rem;
+
 }
 
 @media (max-width: 768px){

@@ -108,7 +108,6 @@ export function Login() {
             </div>
           </div>
         </div>
-        <footer className='footer'> BOORGIR &#169;</footer>
       </div>
     </>
   );

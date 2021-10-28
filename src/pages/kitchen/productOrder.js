@@ -1,4 +1,3 @@
-import Button from '../../components/button/button'
 import './style.css';
 
 function ProductOrder({ item }) {

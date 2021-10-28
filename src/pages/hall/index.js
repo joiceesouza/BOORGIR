@@ -70,10 +70,10 @@ const Cardapio = () => {
         orderRequest.json()
           .then((listOrder) => {
             setOrder(listOrder)
-
           })
       })
   }, [])
+  console.log(order)
 
   function MenuItem(item) {
     const itemCard = addItem.find((card) => card.id === item.id)

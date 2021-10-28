@@ -60,6 +60,7 @@ background-color: var(--platinum);
     color: var(--preto);
     cursor: pointer;
     transition: .3s;
+    overflow: auto;
 }
 
 .item-list:hover {
@@ -108,6 +109,7 @@ background-color: var(--platinum);
     background: var(--cinza);
     margin: 3rem;
     overflow: auto;
+    border: 2px solid var(--vermelho-escuro);
 }
 
 .contador-button {
@@ -172,6 +174,7 @@ background-color: var(--platinum);
 }
 
 .total {
+    margin-top: 5rem;
     text-align: center;
     color: var(--vermelho-escuro);
 }
@@ -186,12 +189,17 @@ background-color: var(--platinum);
 }
 
 .products {
-    margin-top: 200px;
+    margin: 3rem;
+    height: 25rem;
+    width: 25rem;
+    background: var(--cinza);
+    border: 2px solid var(--vermelho-escuro);
     text-align: center;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
     max-width: 400px;
+    overflow: auto;
 }
 
 .rota-kitchen {

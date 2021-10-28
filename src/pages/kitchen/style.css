@@ -55,6 +55,7 @@
     height: 12rem;
     width: 13rem;
     border: 2px solid var(--vermelho-escuro);
+    overflow: auto;
 }
 
 .button-class-kitchen {

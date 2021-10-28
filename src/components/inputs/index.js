@@ -13,6 +13,7 @@ export default function Input({
       value={inputValue}
       onChange={inputChange}
       className={inputClassName}
+      autoComplete='OFF'
     >
     </input>
   )

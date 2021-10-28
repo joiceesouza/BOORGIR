@@ -1,0 +1,22 @@
+.logo-delivered {
+    display: flex;
+    justify-content: center ;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.button-delivered {
+    list-style: none;
+    font-size: 1.2rem;
+    display: flex;
+    margin-left: 20px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.button- {
+    border: none;
+    background: transparent;
+    margin-left: 25px;
+}

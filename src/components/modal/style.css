@@ -24,15 +24,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .modal-container {
     background-color: var(--cinza-claro);
     color: var(--vermelho-escuro);
     width: 60%;
-    height: 60%;
+    height: 50%;
     border-radius: 20px;
-    scroll-behavior:smooth;
 }
 .close {
     background-color: transparent;

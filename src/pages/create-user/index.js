@@ -1,10 +1,6 @@
 import GIF from '../../components/imgs/novologo.gif';
-//import value from "../../services/auth";
-import './style.scss';
 import { useState } from "react";
-//import validateRegister from '../../services/errors';
-//import useForm from '../../services/validation';
-//import validation from '../../services/validation';
+import Input from '../../components/inputs';
 import { Link } from 'react-router-dom';
 import Button from '../../components/button/button';
 
@@ -48,29 +44,15 @@ export default function CreateUser() {
 
     })
       .then((res) => res.json())
-      //.then((json) => {
       .then((json) => {
         const token = json
-        //localStorage.setItem("token", token);
         console.log(json)
 
 
         return token
 
       })
-    /*.catch((error)=> {
-        console.log({
-            "code": "",
-            "message": ""
-          }              
-          )
-    })*/
-
-
   }
-
-
-
 
   return (
     <>
@@ -79,8 +61,6 @@ export default function CreateUser() {
           <div className='co1 align-items-center flex-co1'>
             <img className='img-class' src={GIF} alt='gif' />
           </div>
-
-
           <div className='co1 align-items-center'>
             <div className='form-wrapper align-items-center'>
               <div className='form sign-in'>
@@ -96,22 +76,23 @@ export default function CreateUser() {
                 </div>
                 <div className='input-group'>
                   <i className="far fa-envelope"></i>
-                  <input type='email'
-                    name="email"
-                    autoComplete='OFF'
-                    value={form.email}
-                    onChange={(e) => handleFormChange(e)}
-                    placeholder='Digite seu e-mail'>
-                  </input>
+                  <Input
+                    inputType='email'
+                    inputName="email"
+                    inputValue={form.email}
+                    inputChange={(e) => handleFormChange(e)}
+                    inputPlaceholder='Digite seu e-mail'>
+                  </Input>
                 </div>
                 <div className='input-group'>
                   <i className="fas fa-lock"></i>
-                  <input type='password'
-                    name="password"
-                    value={form.password}
-                    onChange={(e) => handleFormChange(e)}
-                    placeholder='Digite sua senha'>
-                  </input>
+                  <Input
+                    inputType='password'
+                    inputName="password"
+                    inputValue={form.password}
+                    inputChange={(e) => handleFormChange(e)}
+                    inputPlaceholder='Digite sua senha'>
+                  </Input>
                 </div>
                 <div className='input-group'>
                   <select className='style-option' onChange={(e) => setRole(e.target.value)}>
@@ -134,7 +115,6 @@ export default function CreateUser() {
                   <b>
                     <Link className='link-class' to="/">Clique aqui</Link>
                   </b>
-
                 </p>
               </div>
             </div>

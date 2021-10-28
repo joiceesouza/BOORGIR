@@ -2,12 +2,13 @@ import { useState } from "react";
 import './style.css';
 import Modal from "../modal";
 import { Logout } from "../../services/users";
-import Kitchen from "../../pages/kitchen";
-import { Link } from "react-router-dom";
-
+import ButtonRequest from "./buttonRequest";
+import InputFilter from "../../pages/kitchen/inputFilter";
+import { useHistory } from "react-router";
 
 
 function MenuHamburguer() {
+  const history = useHistory()
   const [active, setMode] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [pedido, setIsPedido] = useState(false);
@@ -25,16 +26,17 @@ function MenuHamburguer() {
         <div className={active ? 'menu menuOpen' : 'menu menuClose'} >
           <div className='list'>
             <ul className='listItems'>
-              <li onClick={() => setIsModalVisible(true)}>Acompanhe seu Pedido</li>
-              <li onClick={() => setIsPedido(true)}>Pedidos</li>
-              <li>Histórico de pedidos</li>
+              <li onClick={() => history.push('/salão')}>HOME</li>
+              <li onClick={() => history.push('/cozinha')}>PEDIDOS</li>
+              <li onClick={() => history.push('/pedidos-prontos')}>PEDIDOS PRONTOS</li>
+              <li onClick={() => history.push('/pedidos-entregues')}>PEDIDOS FINALIZADOS</li>
               <li onClick={Logout}>Sair</li>
             </ul>
             {isModalVisible ? (<Modal onClose={() => setIsModalVisible(false)}>
-                <Kitchen/>
+              <ButtonRequest/>
             </Modal>) : null}
             {pedido ? (<Modal onClose={() => setIsPedido(false)}>
-              <h2>batatinha frita 1,2,3</h2>
+              <InputFilter/>
             </Modal>) : null}
           </div>
         </div>
@@ -47,18 +49,6 @@ function MenuHamburguer() {
 
 export default MenuHamburguer;
 
-/*  <ul className='listItems'>
-              <li onClick={() => setIsModalVisible(true)}>Pedidos Pendentes</li>
-              <li onClick={() => setIsPedido(true)}>Pedidos Prontos</li>
-              <li>Histórico de pedidos</li>
-              <li onClick={Logout}>Sair</li>
-            </ul>
-            {isModalVisible ? (<Modal onClose={() => setIsModalVisible(false)}>
-              <h2>Pedido..</h2>
-            </Modal>) : null}
-            {pedido ? (<Modal onClose={() => setIsPedido(false)}>
-              <h2>batatinha frita 1,2,3</h2>
-            </Modal>) : null}
- */
+
 
 

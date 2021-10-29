@@ -101,8 +101,7 @@ background-color: var(--platinum);
 }
 
 .cartItem{
-    text-align: center;
-    justify-content: center;
+
     width: 20rem;
     height: 20rem;
     background: var(--cinza);
@@ -111,7 +110,10 @@ background-color: var(--platinum);
     border: 2px solid var(--vermelho-escuro);
     color: var(--cinza-escuro);
     border-radius: .7rem;
-    scroll-behavior:smooth;
+}
+
+.class-p-order, .price-item-order {
+    margin-left: 5rem;
 }
 
 .contador-button {
@@ -192,7 +194,7 @@ background-color: var(--platinum);
     background: transparent;
     border: 1px solid var(--vermelho-escuro);
     color: var(--vermelho-escuro);
-    align-items: center;
+    margin-left: 4rem;
     font-size: 1rem;
     cursor: pointer;
 }
@@ -210,6 +212,12 @@ background-color: var(--platinum);
     max-width: 400px;
     overflow: auto;
     border-radius: .7rem;
+}
+
+.hr-hall {
+    border: 1px solid var(--vermelho-escuro);
+    margin: 1rem;
+    width: 17rem;
 }
 
 .rota-kitchen {
@@ -240,20 +248,106 @@ background-color: var(--platinum);
 
 @media (max-width: 768px){
     .h1-nav {
+        padding: auto;
+        width: 40rem;
+        font-size: 2rem;
+    }
+
+    .button-hall {
+        font-size: .9rem;
+        height: 1.5rem;
+        width: 4rem;
+        gap: 1rem;
+
+    }
+    .div-button {
+        width: 40rem;
+        margin: 5% 7%;
+        padding: auto;
+        gap: .3em;
+    }
+
+    .style-mesas{
+        font-size: .9rem;
+        height: 1.5rem;
+        width: 8rem;
+    }
+    .input-area{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .containerItem{
+        width: 80%;
+        height: 20rem;
+        padding: auto;
+        overflow: auto;
+        margin-top: 3rem;    
+    }
+
+    .products-img {
+        height: 3rem;
+        width: 3rem; 
+    }
+
+    .class-p-order, .price-item-order {
+        margin-left: 3rem;
+    }
+
+    .item-list{
+        font-size: .6rem;
+        font-weight: 500;
+    }
+
+    .containerItem {
+        width: 40rem;
+        height: 30rem;
+    }
+
+    .cartItem {
+        height: 14rem;
+        width: 14rem;
+        overflow: auto;
+    }
+
+    .contador-button {
+        margin-left: 3rem;
+    }
+
+    .contador {
+        font-size: .9rem;
+    }
+
+    .products {
+        height: 14rem;
+        width: 14rem;
+    }
+   
+
+}
+
+@media (max-width: 560px) {
+
+    .main {
+        padding: auto;
+    }
+
+    .h1-nav {
+        padding: auto;
         font-size: 1rem;
     }
 
     .button-hall {
-        font-size: .5rem;
-        height: 1rem;
-        width: 2rem;
+        font-size: .7rem;
+        height: .9rem;
+        width: 4rem;
 
     }
     .div-button {
-        width: 100%;
-        margin: 3% 5%;
-        padding: 1%;
-        gap: .3em;
+        margin: 0;
+        width: 25rem;
+        gap: 0.3em;
+        height: 3rem;
     }
 
     .style-mesas{
@@ -262,14 +356,14 @@ background-color: var(--platinum);
         width: 8rem;
     }
     .input-area{
-        font-size: .9rem;
-        font-weight: 400;
+        font-size: .8rem;
+        width: 210px;
     }
 
-    .containerItem{
-        width: 80%;
-        height: 30rem;
-        margin: 5% 7%;
+    .containerItem {
+        display: grid;
+        width: 20rem;
+        height: 32rem;
         padding: 3% 0;
         overflow: auto;
         margin-top: 3rem;    
@@ -285,16 +379,6 @@ background-color: var(--platinum);
         font-weight: 500;
     }
 
-    .containerItem {
-        width: 40rem;
-        height: 30rem;
-    }
-
-    .cartItem {
-        width: 8rem;
-        height: 15rem;
-        overflow: auto;
-    }
 
     .contador-button {
         margin-left: 1rem;
@@ -305,8 +389,16 @@ background-color: var(--platinum);
     }
 
     .products {
-        max-width: 100px;
+        height: 10rem;
+        width: 15rem;
+    }
+
+    .cartItem {
+        height: 10rem;
+        width: 15rem;
     }
    
+  
+
 
 }

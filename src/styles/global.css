@@ -128,13 +128,17 @@
 }
 
 @media (max-width: 768px){
+
+    .container {
+        padding: auto;
+    }
     .align-items-center {
         display: table;
         flex-direction: column;
         height: 32rem;
     }
     .form {
-    margin-top: -23rem;
+    margin-top: -12rem;
     display: inherit;
     float: left;
     margin-left: 295px;

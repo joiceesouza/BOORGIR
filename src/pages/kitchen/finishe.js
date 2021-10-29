@@ -24,13 +24,22 @@ function Finishe() {
 
 
   const changeStatus = (item, index) => {
-
+console.log(item)
     putOrder(item.id, "Entregue").then(() => {
       const updatedList = [...orders];
       updatedList.splice(index, 1);
       setOrders(updatedList);
     })
 
+  }
+
+  function Time(item) {
+    const timeready = Date.parse(item.updatedAt) - Date.parse(item.createdAt)
+    const minute = Math.round((timeready / 1000 * 60) % 60) 
+    const hour = Math.floor(timeready / (1000 * 60 * 60)) 
+  
+    const time = `${hour}:${minute}`
+    return time
   }
 
   return (
@@ -49,7 +58,8 @@ function Finishe() {
           <article key={item.id}>
             <div className='product-finishe' >
               <p>Pedido {item.id} </p>
-              <p>{item.status} em: {new Date(item.updatedAt).toLocaleString()}</p>
+              <p>{item.status} em: {new Date(item.updatedAt ).toLocaleString()}</p>
+             <p> Tempo de preparo: {Time(item)}</p>
               <p>Nome: {item.client_name}</p>
               <p>Mesa: {item.table}</p>
               <div className="finishe-order">

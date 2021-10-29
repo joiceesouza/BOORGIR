@@ -112,7 +112,8 @@ const Cardapio = () => {
   }
 
   return (
-    <>
+    
+    <main className='main'>
       <div className='nav'>
         <MenuHamburguer />
         <h1 className='h1-nav'>BEST BURGER IN TOWN</h1>
@@ -191,7 +192,7 @@ const Cardapio = () => {
                     >
                     </Button>
                   </div>
-                  <hr/>
+                  <hr className='hr-hall'/>
                 </div>
               )
             })}
@@ -217,12 +218,13 @@ const Cardapio = () => {
             buttonClass='rota-kitchen'
           ></Button>
         </div>
+      
       </Modal>) : null}
 
       {modal ? (<Modal onClose={() => setModal(false)}>
         <h2 className='h2-modal'>Preencha corretamente o pedido!</h2>
       </Modal>) : null}
-    </>
+      </main>
   )
 
 }

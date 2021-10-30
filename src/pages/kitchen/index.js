@@ -37,26 +37,29 @@ function Kitchen() {
 
 
   const changeStatus = (item, option) => {
-
     let newState = item.status;
     if (item.status === 'Pendente' && option === 'Preparar') {
       newState = "Preparando..."
-    } else if (item.status === 'Preparando...' && option === 'Finalizar') {
       setIsModalVisible(true)
+    } else if (item.status === 'Preparando...' && option === 'Finalizar') {
       const newArray = order.filter(pedido => pedido.id !== item.id);
       setPutOrderItem(newArray)
       newState = "Finalizado"
+      order.splice(option, 1);
     } else if (item.status === 'Pendente' && option === 'Finalizar') {
       setModal(true)
-    } else {
+    }  
+    else {
       return;
     }
+
+
 
 
     putOrder(item.id, newState).then(() => {
       if (newState === "Preparando...") {
 
-        const updatedKitchen = putOrderItem.map((pedido) => {
+        const updatedKitchen = putOrderItem.map((pedido, index) => {
           if (pedido.id === item.id) {
             pedido.status = newState;
             pedido.updatedAt = new Date()
@@ -65,6 +68,11 @@ function Kitchen() {
         });
 
         setPutOrderItem(updatedKitchen)
+      }
+      if (newState === 'Finalizado') {
+        const updatedList = [...putOrderItem];
+      updatedList.splice(option, 1);
+      setPutOrderItem(updatedList);
       }
 
     })
@@ -88,22 +96,20 @@ function Kitchen() {
               item={item}
             />
             <div className='button-class-kitchen'>
-              <Button
+              {item.status === 'Pendente' ? ( <Button
                 buttonType='submit'
                 buttonOnclick={() => changeStatus(item, 'Preparar')}
                 buttonText="Preparar"
                 buttonClass='preparar'
-              ></Button>
-              <Button
-                buttonType='submit'
-                buttonOnclick={() => changeStatus(item, 'Finalizar')}
-                buttonText="Pronto"
-                buttonClass='pronto'
-              ></Button>
+              ></Button>) :  <Button
+              buttonType='submit'
+              buttonOnclick={() => changeStatus(item, 'Finalizar')}
+              buttonText="Pronto"
+              buttonClass='pronto'
+            ></Button>}
             </div>
 
           </div>
-
         ))}
       </div>
       {isModalVisible ? (<Modal onClose={() => setIsModalVisible(false)}>

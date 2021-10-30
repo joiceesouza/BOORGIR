@@ -1,10 +1,9 @@
 import { useState } from "react";
-import './style.css';
+import { useHistory } from "react-router-dom";
 import Modal from "../modal";
-import { Logout } from "../../services/users";
 import ButtonRequest from "./buttonRequest";
 import InputFilter from "../../pages/kitchen/inputFilter";
-import { useHistory } from "react-router";
+import './style.css';
 
 
 function MenuHamburguer() {
@@ -13,6 +12,10 @@ function MenuHamburguer() {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [pedido, setIsPedido] = useState(false);
 
+  const Logout = () => {
+    localStorage.clear() 
+    history.push('/')
+  }
 
   const ToggleMode = () => {
     setMode(!active)

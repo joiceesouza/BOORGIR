@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
-import MenuArea from "../../components/menu-area";
-import CardList from "../../components/cardList";
+import { useHistory } from "react-router-dom";
 import { getProducts, getOrder } from "../../services/data";
-import Button from "../../components/button/button";
-import './style.css';
-import MenuHamburguer from "../../components/menu-hamburguer";
-import Input from "../../components/inputs";
-import Modal from "../../components/modal";
 import { tokenUser } from "../../services/users";
-import { useHistory } from "react-router";
+import MenuArea from "../../components/menu-area";
+import Modal from "../../components/modal";
+import Input from "../../components/inputs";
+import MenuHamburguer from "../../components/menu-hamburguer";
+import Button from "../../components/button/button";
+import CardList from "../../components/cardList";
+import './style.css';
+
 
 const Cardapio = () => {
 
@@ -92,8 +93,11 @@ const Cardapio = () => {
   function RemoveItem(item) {
     const itemCard = addItem.find((card) => card.id === item.id)
     if (itemCard) {
-      addItem.forEach((products) => {
-        if (products.id === item.id) {
+      addItem.forEach((products, index) => {
+        if (products.qtd === 1) {
+          addItem.splice(index, 1);
+        }
+        else if (products.id === item.id) {
           products.qtd--
         }
       })

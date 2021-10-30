@@ -24,7 +24,6 @@ function Finishe() {
 
 
   const changeStatus = (item, index) => {
-console.log(item)
     putOrder(item.id, "Entregue").then(() => {
       const updatedList = [...orders];
       updatedList.splice(index, 1);

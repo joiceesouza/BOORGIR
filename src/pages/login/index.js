@@ -1,10 +1,7 @@
-//import Button from "../../components/button/button";
-import GIF from '../../components/imgs/novologo.gif'
 import { useState, } from "react";
-import { useHistory } from "react-router";
+import { Link, useHistory } from 'react-router-dom';
+import GIF from '../../components/imgs/novologo.gif';
 import './style.css';
-import { Link } from 'react-router-dom';
-
 
 export function Login() {
   const history = useHistory()

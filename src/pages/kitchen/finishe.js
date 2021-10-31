@@ -14,6 +14,7 @@ function Finishe() {
         ordersList.json()
           .then((itemOrder) => {
             setOrders(itemOrder)
+            itemOrder.sort((a, b) => new Date(a.updatedAt).getTime() - new Date(b.updatedAt).getTime());
 
             const pedidosFinalizados = itemOrder.filter((item) => item.status === 'Finalizado');
             setOrders(pedidosFinalizados)
@@ -56,11 +57,11 @@ function Finishe() {
         {orders.map((item, index) => (
           <article key={item.id}>
             <div className='product-finishe' >
-              <p>Pedido: {item.id} </p>
-              <p>Nome: {item.client_name}</p>
+              <p><i className="fas fa-receipt item-icon"></i> {item.id} </p>
+              <p><i class="far fa-user item-icon"></i> {item.client_name}</p>
               <p>Mesa: {item.table}</p>
               <p>{item.status} em: {new Date(item.updatedAt ).toLocaleString()}</p>
-             <p> Tempo de preparo: {Time(item)}</p>
+             <p> <i class="far fa-clock item-icon"></i> {Time(item)}</p>
               <div className="finishe-order">
                 {item.Products.map((product) =>
                   <span key={product.id}>

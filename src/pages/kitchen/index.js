@@ -19,7 +19,7 @@ function Kitchen() {
         order.json()
           .then((itemOrder) => {
             setOrder(itemOrder)
-            itemOrder.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+            itemOrder.sort((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime());
             const updateItems = itemOrder.map((item) => {
               if (item.status === "pending") {
                 item.status = "Pendente"
@@ -39,8 +39,8 @@ function Kitchen() {
   const changeStatus = (item, option) => {
     let newState = item.status;
     if (item.status === 'Pendente' && option === 'Preparar') {
-      newState = "Preparando..."
       setIsModalVisible(true)
+      newState = "Preparando..."
     } else if (item.status === 'Preparando...' && option === 'Finalizar') {
       const newArray = order.filter(pedido => pedido.id !== item.id);
       setPutOrderItem(newArray)
@@ -52,9 +52,6 @@ function Kitchen() {
     else {
       return;
     }
-
-
-
 
     putOrder(item.id, newState).then(() => {
       if (newState === "Preparando...") {

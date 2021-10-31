@@ -23,18 +23,19 @@ Teve como desafio desenvolver uma aplicação destinada a uma hamburgueria com f
 ``` Html
 [Historia de usuario 1] 
     Eu, como garçom/garçonete quero entrar no sistema de pedidos.
-- Critérios de aceitação:
 
+- Critérios de aceitação:
     Acessar uma tela de login.
     Inserir email e senha.
     Receber mensagens de erros compreensíveis, conforme o erro e as informações inseridas.
     Entrar no sistema de pedidos caso as credenciais forem corretas.
 
 [História de usuário 2]
-    Eu como garçom/garçonete quero poder anotar o pedido de um cliente para não depender da minha memória, saber quanto cobrar e poder enviar os pedidos para a cozinha para serem preparados em ordem.
+    Eu como garçom/garçonete quero poder anotar o pedido de um 
+    cliente para não depender da minha memória, saber quanto cobrar e 
+    poder enviar os pedidos para a cozinha para serem preparados em ordem.
 
 - Critérios de aceitação:
-
     Anotar o nome do cliente.
     Adicionar produtos aos pedidos.
     Excluir produtos.
@@ -43,10 +44,11 @@ Teve como desafio desenvolver uma aplicação destinada a uma hamburgueria com f
     Funcionar bem em um tablet.
 
 [História de usuário 3] 
-    Eu como chefe de cozinha quero ver os pedidos dos clientes em ordem, poder marcar que estão prontos e poder notificar os garçons/garçonetes que o pedido está pronto para ser entregue ao cliente.
+    Eu como chefe de cozinha quero ver os pedidos dos clientes em ordem, 
+    poder marcar que estão prontos e poder notificar os garçons/garçonetes 
+    que o pedido está pronto para ser entregue ao cliente.
 
 - Critérios de aceitação:
-
     - Ver os pedidos ordenados à medida em que são feitos.
     - Marcar os pedidos que foram preparados e estão prontos para serem servidos.
     - Ver o tempo que levou para preparar o pedido desde que chegou, até ser marcado como concluído.
@@ -55,7 +57,6 @@ Teve como desafio desenvolver uma aplicação destinada a uma hamburgueria com f
     Eu como garçom/garçonete quero ver os pedidos que estão prontos para entregá-los rapidamente aos clientes.
 
 - Critérios de aceitação: 
-
    - Ver a lista de pedidos prontos para servir.
    - Marcar os pedidos que foram entregues.
 

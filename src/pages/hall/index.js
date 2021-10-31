@@ -116,7 +116,7 @@ const Cardapio = () => {
   }
 
   return (
-    
+
     <main className='main'>
       <div className='nav'>
         <MenuHamburguer />
@@ -138,29 +138,6 @@ const Cardapio = () => {
             buttonClass='button-hall'
           >
           </Button>
-          <div className='option-mesas'>
-            <select className='style-mesas' onChange={(e) => setMesaValue(e.target.value)}>
-              <option className='style-mesas'>  Escolha a mesa </option>
-              <option className='style-mesas' value='1'>  Mesa 1 </option>
-              <option className='style-mesas' value='2'>  Mesa 2  </option>
-              <option className='style-mesas' value='3'>  Mesa 3  </option>
-              <option className='style-mesas' value='4'>  Mesa 4  </option>
-              <option className='style-mesas' value='5'>  Mesa 5  </option>
-              <option className='style-mesas' value='6'>  Mesa 6  </option>
-              <option className='style-mesas' value='7'>  Mesa 7  </option>
-              <option className='style-mesas' value='8'>  Mesa 8  </option>
-              <option className='style-mesas' value='9'>  Mesa 9  </option>
-              <option className='style-mesas' value='10'>  Mesa 10  </option>
-            </select>
-          </div>
-          <Input
-            inputType='text'
-            inputName='nameClient'
-            inputPlaceholder='Digite o nome do cliente'
-            autoComplete='OFF'
-            inputChange={(e) => setNameValue(e.target.value)}
-            inputClassName='input-area'
-          />
         </div>
         <div className='containerItem'>
           <div className='products'>
@@ -180,6 +157,20 @@ const Cardapio = () => {
                     qtd={item.id}
                   />
                   <div className='contador-button'>
+                    {item.qtd === 1 ? (<button
+                      onClick={() => RemoveItem(item)}
+                      className='input-remove'
+                    >
+                      <i class="far fa-trash-alt"></i>
+                    </button>) : <Button
+                      buttonType='button'
+                      buttonOnclick={() => RemoveItem(item)}
+                      buttonText="-"
+                      buttonClass='contador'
+                    >
+                    </Button>}
+                    <p className='number-contador'> {item.qtd}</p>
+
                     <Button
                       buttonType='button'
                       buttonOnclick={() => MenuItem(item)}
@@ -187,28 +178,45 @@ const Cardapio = () => {
                       buttonClass='contador'
                     >
                     </Button>
-                    <p className='number-contador'> {item.qtd}</p>
-                    <Button
-                      buttonType='button'
-                      buttonOnclick={() => RemoveItem(item)}
-                      buttonText="-"
-                      buttonClass='contador'
-                    >
-                    </Button>
                   </div>
-                  <hr className='hr-hall'/>
+                  <hr className='hr-hall' />
                 </div>
               )
             })}
-            <div className='total'>
-              <label className='label-total'>Total: R$ {Total()},00</label>
+            <div className='client-hall'>
+              <Input
+                inputType='text'
+                inputName='nameClient'
+                inputPlaceholder='Digite o nome do cliente'
+                autoComplete='OFF'
+                inputChange={(e) => setNameValue(e.target.value)}
+                inputClassName='input-area'
+              />
+              <div className='option-mesas'>
+                <select className='style-mesas' onChange={(e) => setMesaValue(e.target.value)}>
+                  <option className='style-mesas'>  Escolha a mesa </option>
+                  <option className='style-mesas' value='1'>  Mesa 1 </option>
+                  <option className='style-mesas' value='2'>  Mesa 2  </option>
+                  <option className='style-mesas' value='3'>  Mesa 3  </option>
+                  <option className='style-mesas' value='4'>  Mesa 4  </option>
+                  <option className='style-mesas' value='5'>  Mesa 5  </option>
+                  <option className='style-mesas' value='6'>  Mesa 6  </option>
+                  <option className='style-mesas' value='7'>  Mesa 7  </option>
+                  <option className='style-mesas' value='8'>  Mesa 8  </option>
+                  <option className='style-mesas' value='9'>  Mesa 9  </option>
+                  <option className='style-mesas' value='10'>  Mesa 10  </option>
+                </select>
+              </div>
+              <div className='total'>
+                <label className='label-total'>Total: R$ {Total()},00</label>
+              </div>
+              <Button
+                buttonType='button'
+                buttonOnclick={postOrder}
+                buttonText="ENVIAR PARA COZINHA"
+                buttonClass='button-class'
+              ></Button>
             </div>
-            <Button
-              buttonType='button'
-              buttonOnclick={postOrder}
-              buttonText="ENVIAR PARA COZINHA"
-              buttonClass='button-class'
-            ></Button>
           </div>
         </div>
       </div>
@@ -222,13 +230,13 @@ const Cardapio = () => {
             buttonClass='rota-kitchen'
           ></Button>
         </div>
-      
+
       </Modal>) : null}
 
       {modal ? (<Modal onClose={() => setModal(false)}>
         <h2 className='h2-modal'>Preencha corretamente o pedido!</h2>
       </Modal>) : null}
-      </main>
+    </main>
   )
 
 }

@@ -14,15 +14,16 @@ function Delivered() {
       .then((ordersList) => {
         ordersList.json()
           .then((itemOrder) => {
-
             setOrders(itemOrder)
 
             const orderDelivered = itemOrder.filter((item) => item.status === 'Entregue');
-            setOrders(orderDelivered)
-
+            setOrders(orderDelivered)      
           })
+          
       })
+      
   }, [])
+
 
   return (
     <>
@@ -42,6 +43,7 @@ function Delivered() {
               <p>Status: {item.status}</p>
               <p>Nome: {item.client_name}</p>
               <p>Mesa: {item.table}</p>
+              <p> Entregue: {new Date(item.updatedAt).toLocaleString()}</p>
               {item.Products.map((product) =>
                 <span key={product.id}>
                   <p>{product.qtd} {product.name} {product.flavor} </p>

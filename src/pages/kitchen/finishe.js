@@ -56,17 +56,18 @@ function Finishe() {
         {orders.map((item, index) => (
           <article key={item.id}>
             <div className='product-finishe' >
-              <p>Pedido {item.id} </p>
-              <p>{item.status} em: {new Date(item.updatedAt ).toLocaleString()}</p>
-             <p> Tempo de preparo: {Time(item)}</p>
+              <p>Pedido: {item.id} </p>
               <p>Nome: {item.client_name}</p>
               <p>Mesa: {item.table}</p>
+              <p>{item.status} em: {new Date(item.updatedAt ).toLocaleString()}</p>
+             <p> Tempo de preparo: {Time(item)}</p>
               <div className="finishe-order">
                 {item.Products.map((product) =>
                   <span key={product.id}>
                     <p>{product.qtd} {product.name} {product.flavor}</p>
                   </span>
                 )}
+                            </div>
                 <div className='button-class-finishe'>
                   <Button
                     buttonType='button'
@@ -76,7 +77,6 @@ function Finishe() {
                   ></Button>
                 </div>
               </div>
-            </div>
           </article>
         ))}
       </section>

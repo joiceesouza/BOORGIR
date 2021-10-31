@@ -126,7 +126,7 @@ background-color: var(--platinum);
     margin-left: 5rem;
 }
 
-.contador {
+.contador, .input-remove {
     background: var(--preto);
     border-radius: 30%;
     border: none;
@@ -184,8 +184,13 @@ background-color: var(--platinum);
     cursor: pointer;
 }
 
+.client-hall {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
 .total {
-    margin-top: 5rem;
     text-align: center;
     color: var(--vermelho-escuro);
 }
@@ -194,9 +199,12 @@ background-color: var(--platinum);
     background: transparent;
     border: 1px solid var(--vermelho-escuro);
     color: var(--vermelho-escuro);
-    margin-left: 4rem;
     font-size: 1rem;
     cursor: pointer;
+}
+.input-remove {
+    background: transparent;
+    color: var(--preto);
 }
 
 .products {

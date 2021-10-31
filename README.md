@@ -1,5 +1,5 @@
 <h1 align='center'>
-    <img src='https://ik.imagekit.io/123sbc/novologo_evt59uOi7j.png'>
+    <img eight="400" width="300" src='https://ik.imagekit.io/123sbc/novologo_evt59uOi7j.png'>
 </h1>
 
 # Indice
@@ -15,7 +15,7 @@
 ## Sobre 
 
 O projeto **BURGUER QUEEN** foi criado durante o bootcamp da Laboratória.
-Teve como desafio desenvolver uma aplicação destinada a uma hamburgueria com funcionamento 24 horas. Para isso foi criada uma aplicação SPA(Single Page Aplication),  
+Teve como desafio desenvolver uma aplicação destinada a uma hamburgueria com funcionamento 24 horas. Para isso foi criada uma aplicação SPA(Single Page Aplication), uma interface web integrada com a API <a href=''>Burguer Queen Api</a>
 
 ---
 ## As Histórias de usuário
@@ -126,18 +126,42 @@ Teve como desafio desenvolver uma aplicação destinada a uma hamburgueria com f
    <p> 
     <img src='https://ik.imagekit.io/123sbc/Untitled_design_2__5yuFpd92X0.jpg'>
    </p>
+
+   ---
    <p>
     <img src='https://ik.imagekit.io/123sbc/Untitled_design_4__UTEi2KToG.jpg'>
    </p>
+
+   ---
    <p>
     <img src='https://ik.imagekit.io/123sbc/Untitled_design_3__-7cQA40eY.jpg'>
    </p>
 
 </article>
+
 ---
 
 ## Tecnologias utilizadas
 
 O projeto foi desenvolvido usando as seguites tecnologias: 
+<div>
+  <img eight="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+   <img eight="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+    <img eight="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
+     <img eight="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" />
+      <img eight="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" />
+       <img eight="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" />
+</div>
+
+---
+
+## Desenvolvido por
+
+ **Joice Souza** 
+ 
+ <a href="https://www.linkedin.com/in/joicesouza-/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+
+
+
 
 

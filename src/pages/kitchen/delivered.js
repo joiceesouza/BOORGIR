@@ -15,6 +15,7 @@ function Delivered() {
         ordersList.json()
           .then((itemOrder) => {
             setOrders(itemOrder)
+            itemOrder.sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime());
 
             const orderDelivered = itemOrder.filter((item) => item.status === 'Entregue');
             setOrders(orderDelivered)      
@@ -41,7 +42,7 @@ function Delivered() {
           <div className="container-" key={item.id}>
             <article >
               <p>Status: {item.status}</p>
-              <p>Nome: {item.client_name}</p>
+              <p><i class="far fa-user item-icon"></i> {item.client_name}</p>
               <p>Mesa: {item.table}</p>
               <p> Entregue: {new Date(item.updatedAt).toLocaleString()}</p>
               {item.Products.map((product) =>

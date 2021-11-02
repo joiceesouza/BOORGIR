@@ -1,9 +1,9 @@
 import { getOrder, putOrder } from "../../services/data";
 import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import ProductOrder from "./productOrder";
 import Button from "../../components/button/button";
 import Modal from "../../components/modal";
-import { useHistory } from "react-router";
 import LogoNav from '../../components/logoRequest/index'
 
 function Kitchen() {

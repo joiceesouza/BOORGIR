@@ -1,11 +1,14 @@
-import GIF from '../../components/imgs/novologo.gif';
 import { useState } from "react";
+import { Link, useHistory } from 'react-router-dom';
+import GIF from '../../components/imgs/novologo.gif';
 import Input from '../../components/inputs';
-import { Link } from 'react-router-dom';
 import Button from '../../components/button/button';
+import Modal from '../../components/modal'
 
 export default function CreateUser() {
 
+  const history = useHistory()
+  const [isModalVisible, setIsModalVisible] = useState(false);
   const [role, setRole] = useState('');
   const [form, setForm] = useState(
     {
@@ -27,6 +30,7 @@ export default function CreateUser() {
     }
   }
 
+
   function handleFormSubmit() {
     return fetch('https://lab-api-bq.herokuapp.com/users', {
       method: 'POST',
@@ -47,7 +51,7 @@ export default function CreateUser() {
       .then((json) => {
         const token = json
         console.log(json)
-
+        setIsModalVisible(true)
 
         return token
 
@@ -122,6 +126,10 @@ export default function CreateUser() {
 
         </div>
       </div>
+      {isModalVisible ? (<Modal onClose={() => setIsModalVisible(false)}>
+        <h2 className='h2-modal'>Cadastro realizado com sucesso!</h2>
+        <button className='rota-kitchen' onClick={() => history.push('/')}>Entrar</button>
+      </Modal>) : null}
     </main>
   );
 }

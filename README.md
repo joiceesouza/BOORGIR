@@ -15,7 +15,20 @@
 ## Sobre 
 
 O projeto **BURGUER QUEEN** foi criado durante o bootcamp da Laboratória.
-Teve como desafio desenvolver uma aplicação destinada a uma hamburgueria com funcionamento 24 horas. Para isso foi criada uma aplicação SPA(Single Page Aplication), uma interface web integrada com a API <a href=''>Burguer Queen Api</a>
+Teve como desafio desenvolver uma aplicação destinada a uma hamburgueria com funcionamento 24 horas. Para isso foi criada uma aplicação SPA(Single Page Aplication), uma interface web integrada com a API <a href='lab-api-bq.herokuapp.com/'>Burguer Queen Api</a>
+
+---
+## Conheça a aplicação
+
+ ``` html
+ Para acessar a cozinha
+ E-mail: cozinha@gmail.com
+Senha: 123456
+
+Para acessar o salão
+E-mail: 
+Senha: 
+ ```
 
 ---
 ## As Histórias de usuário

@@ -1,8 +1,8 @@
+import { BrowserRouter, Route } from "react-router-dom";
 import { Login } from '../pages/login';
 import Hall from '../pages/hall';
 import CreateUser from '../pages/create-user';
 import Kitchen from '../pages/kitchen';
-import { BrowserRouter, Route } from "react-router-dom";
 import PrivateRoutes from './private-routes';
 import Finishe from '../pages/kitchen/finishe';
 import Delivered from '../pages/kitchen/delivered';

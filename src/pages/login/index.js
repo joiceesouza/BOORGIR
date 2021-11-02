@@ -1,5 +1,5 @@
 import { useState, } from "react";
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory} from 'react-router-dom';
 import GIF from '../../components/imgs/novologo.gif';
 import './style.css';
 
@@ -30,7 +30,6 @@ export function Login() {
 
     })
       .then((res) => res.json())
-      //.then((json) => {
       .then((json) => {
         const token = json
         localStorage.setItem('BOORGIR', json.token);

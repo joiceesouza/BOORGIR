@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Button from "../../components/button/button";
 import { useHistory } from "react-router";
 import LogoNav from "../../components/logoRequest";
+import ToTop from "../../components/toTop";
 
 function Finishe() {
   const [orders, setOrders] = useState([]);
@@ -81,6 +82,7 @@ function Finishe() {
           </article>
         ))}
       </section>
+      {ToTop()}
     </>
   )
 

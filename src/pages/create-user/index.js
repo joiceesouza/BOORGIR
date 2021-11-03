@@ -9,6 +9,7 @@ export default function CreateUser() {
 
   const history = useHistory()
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [modal, setModal] = useState(false)
   const [role, setRole] = useState('');
   const [form, setForm] = useState(
     {
@@ -50,12 +51,37 @@ export default function CreateUser() {
       .then((res) => res.json())
       .then((json) => {
         const token = json
-        console.log(json)
-        setIsModalVisible(true)
-
+        if (form.name !== '' || form.email !== '' || form.password !== ''){
+          setIsModalVisible(true)
+        }
         return token
 
       })
+      .catch(() => {
+        setModal(true)
+      })
+  }
+
+  const validation = () => {
+    let errors = {};
+  
+    if (!form.name) {
+      errors.name = 'É necessário digitar seu nome!'
+    }
+    if (!form.email) {
+      errors.email = 'É necessario digitar seu e-mail!'
+    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
+      errors.email = 'Digite um e-mail válido!'
+    }
+    if (!form.password) {
+      errors.password = 'É necessario digitar sua senha!'
+    } else if (form.password.length < 6) {
+      errors.password = 'Digite uma senha com 6 caracteres ou mais!'
+    }
+  
+    return (
+      errors
+    )
   }
 
   return (
@@ -77,6 +103,7 @@ export default function CreateUser() {
                     onChange={(e) => handleFormChange(e)}
                     placeholder='Digite seu nome'>
                   </input>
+                  <p>{validation}</p>
                 </div>
                 <div className='input-group'>
                   <i className="far fa-envelope"></i>
@@ -95,7 +122,8 @@ export default function CreateUser() {
                     inputName="password"
                     inputValue={form.password}
                     inputChange={(e) => handleFormChange(e)}
-                    inputPlaceholder='Digite sua senha'>
+                    inputPlaceholder='Digite sua senha'
+                  >
                   </Input>
                 </div>
                 <div className='input-group'>
@@ -129,6 +157,10 @@ export default function CreateUser() {
       {isModalVisible ? (<Modal onClose={() => setIsModalVisible(false)}>
         <h2 className='h2-modal'>Cadastro realizado com sucesso!</h2>
         <button className='rota-kitchen' onClick={() => history.push('/')}>Entrar</button>
+      </Modal>) : null}
+
+      {modal ? (<Modal onClose={() => setModal(false)}>
+        <h2 className='h2-modal'> Preencha corretamente todos os campos</h2>
       </Modal>) : null}
     </main>
   );

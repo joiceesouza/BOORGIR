@@ -5,6 +5,7 @@ import ProductOrder from "./productOrder";
 import Button from "../../components/button/button";
 import Modal from "../../components/modal";
 import LogoNav from '../../components/logoRequest/index'
+import ToTop from "../../components/toTop";
 
 function Kitchen() {
   let [order, setOrder] = useState([])
@@ -74,6 +75,7 @@ function Kitchen() {
 
     })
   }
+
   return (
     <>
       <div className='logo-delivered'>
@@ -109,6 +111,7 @@ function Kitchen() {
           </div>
         ))}
       </div>
+      {ToTop()}
       {isModalVisible ? (<Modal onClose={() => setIsModalVisible(false)}>
         <h2 className='h2-modal'>Pedido foi enviado para o garçom!</h2>
       </Modal>) : null}

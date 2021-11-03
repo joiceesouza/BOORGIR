@@ -44,6 +44,7 @@ background-color: var(--platinum);
     width: 100px;
     border-radius: 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: .5em;
 }
 
 .item-list{
@@ -55,10 +56,11 @@ background-color: var(--platinum);
     margin: 6px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: var(--cinza-medio);
-    color: var(--);
+    color: var(--cinza2);
     cursor: pointer;
     transition: .3s;
-    overflow: auto;
+    height: 12rem;
+    width: 15rem;
 }
 
 .item-list:hover {

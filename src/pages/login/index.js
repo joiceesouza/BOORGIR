@@ -33,16 +33,13 @@ export function Login() {
       .then((json) => {
         const token = json
         localStorage.setItem('BOORGIR', json.token);
-
-        if (json.role === "garçom") {
-          history.push('/salão');
-        } else if (json.role === "cozinheiro") {
-          history.push('/cozinha');
-        } else {
-          return token
+        if (token.role === 'kitchen') {
+          history.push('/cozinha')
         }
 
+        else {history.push('/salão')}
 
+        return token
       })
       .catch((error) => {
         console.log({

@@ -37,6 +37,8 @@
     margin: 2rem 2rem;
     background: var(--cinza);
     border-radius: 1.2rem;  
+    justify-content: center;
+    align-items: center;
 }
 
 .button-class-kitchen {
@@ -179,6 +181,24 @@
     font-size: 2rem;
     color: var(--vermelho-escuro);
     cursor: pointer;
+}
+
+.back-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-load{
+    display: grid;
+}
+
+.icon-reload {
+    background: transparent;
+    border: none;
+    color: var(--cinza-escuro);
+    font-size: 1.5rem;
+   
 }
 
 @media (max-width: 768px){

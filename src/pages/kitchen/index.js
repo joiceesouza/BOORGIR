@@ -76,6 +76,11 @@ function Kitchen() {
     })
   }
 
+  function reload() {
+    document.location.reload(true)
+  }
+
+
   return (
     <>
       <div className='logo-delivered'>
@@ -114,6 +119,10 @@ function Kitchen() {
       {ToTop()}
       {isModalVisible ? (<Modal onClose={() => setIsModalVisible(false)}>
         <h2 className='h2-modal'>Pedido foi enviado para o garçom!</h2>
+        <div className='button-load'>
+      <h4 className='h2-modal'>Atualize o status do pedido</h4>
+      <button onClick={reload} className='icon-reload'><i class="fas fa-sync"></i></button>
+      </div>
       </Modal>) : null}
 
       {modal ? (<Modal onClose={() => setModal(false)}>

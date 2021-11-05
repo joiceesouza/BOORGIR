@@ -298,6 +298,7 @@ background-color: var(--platinum);
     .products-img {
         height: 3rem;
         width: 3rem; 
+     
     }
 
     .class-p-order, .price-item-order {
@@ -307,6 +308,8 @@ background-color: var(--platinum);
     .item-list{
         font-size: .6rem;
         font-weight: 500;
+        height: 7rem;
+        width: 5rem;
     }
 
     .containerItem {
@@ -387,6 +390,8 @@ background-color: var(--platinum);
     .item-list{
         font-size: .6rem;
         font-weight: 500;
+        height: 8rem;
+        width: 8rem;
     }
 
 

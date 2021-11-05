@@ -1,8 +1,9 @@
-import { getOrder } from "../../services/data";
 import { useEffect, useState } from "react";
-import './style.css';
 import { useHistory } from "react-router";
 import LogoNav from "../../components/logoRequest";
+import { getOrder } from "../../services/data";
+import ToTop from "../../components/toTop";
+import './style.css';
 
 
 function Delivered() {
@@ -54,6 +55,7 @@ function Delivered() {
           </div>
         ))}
       </div>
+      {ToTop()}
     </>
   )
 }

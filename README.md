@@ -20,14 +20,10 @@ Teve como desafio desenvolver uma aplicação destinada a uma hamburgueria com f
 ---
 ## Conheça a aplicação
 
- ``` html
- Para acessar a cozinha
- E-mail: cozinha@gmail.com
-Senha: 123456
 
-Para acessar o salão
-E-mail: 
-Senha: 
+ ``` html
+ E-mail: visitante@gmail.com
+Senha: 123456
  ```
 
 ---
@@ -136,18 +132,18 @@ Senha:
 ---
 ## Layout
 <article>
-   <p> 
-    <img src='https://ik.imagekit.io/123sbc/Untitled_design_2__5yuFpd92X0.jpg'>
+   <p align='center'> 
+    <img eight="400" width="400"  src='https://ik.imagekit.io/123sbc/Untitled_design_2__5yuFpd92X0.jpg'>
    </p>
 
    ---
-   <p>
-    <img src='https://ik.imagekit.io/123sbc/Untitled_design_4__UTEi2KToG.jpg'>
+   <p align='center'>
+    <img eight="400" width="400" src='https://ik.imagekit.io/123sbc/Untitled_design_4__UTEi2KToG.jpg'>
    </p>
 
    ---
-   <p>
-    <img src='https://ik.imagekit.io/123sbc/Untitled_design_3__-7cQA40eY.jpg'>
+   <p align='center'>
+    <img eight="400" width="400"  src='https://ik.imagekit.io/123sbc/Untitled_design_3__-7cQA40eY.jpg'>
    </p>
 
 </article>
